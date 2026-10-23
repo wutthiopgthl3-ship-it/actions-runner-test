@@ -1,0 +1,17 @@
+
+name: Test GitHub Runner
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test-runner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Runner Started
+        run: |
+          echo "RUNNER STARTED SUCCESSFULLY"
+          node --version
+          java -version
+          echo "TEST PASSED"
